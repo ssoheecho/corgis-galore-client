@@ -1,13 +1,19 @@
 import React from 'react';
-import Emoji from 'react-emoji-render';
 
 const Home = () => {
   return(
     <div className="main-content">
-      <h1>CORGIS GALORE</h1>
-      <p>Do you love corgis? Well, then you have come to the right place!</p>
-      <p>Get your daily dose of corgis here by clicking on the breadloaf</p>
-      <a href="/corgis">🍞</a>
+      <div className="main-content-title">
+        <h1>CORGIS GALORE</h1>
+      </div>
+      <div className="main-content-body">
+        <p>Do you ❤️ corgis? Well, you've come to the right place!<br />
+        Get your daily dose of corgis here by clicking below ⬇️</p>
+        <a id="breadloaf" href="/corgis">🍞</a>
+        <p>Sourced from Giphy <br />
+        Made with lots of ❤️🧡💛💚💙💜
+        </p>
+      </div>
     </div>
   )
 }

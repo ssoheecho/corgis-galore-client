@@ -11,8 +11,23 @@
   display: block;
 }
 
-.main-content {
-  padding: 50px 0;
+/* Home */
+.main-content-title {
+  margin-top: 60px;
+}
+
+.main-content-body {
+  margin-top: 75px;
+}
+
+.main-content-body p {
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+.main-content-body #breadloaf {
+  font-size: 40px;
+  text-decoration: none;
 }
 
 .footer {
