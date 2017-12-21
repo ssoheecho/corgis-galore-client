@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { fetchCorgis } from './actions/corgisAction'
 import CorgisList from './components/CorgisList';
 import './App.css';
