@@ -23,7 +23,7 @@ class App extends Component {
         <Router>
           <Switch>
             <Route exact path="/" component={Home} />
-            <CorgisList corgis={this.props.corgiData}/>
+            <Route path="/corgis" render={() => <CorgisList corgis={this.props.corgiData}/>} />
           </Switch>
         </Router>
         <div className="footer">
@@ -33,6 +33,7 @@ class App extends Component {
     );
   }
 }
+
 
 function mapStateToProps(state) {
   return {
