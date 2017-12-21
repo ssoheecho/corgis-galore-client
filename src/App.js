@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { fetchCorgis } from './actions/corgisAction'
 import CorgisList from './components/CorgisList';
 import Home from './components/Home'
+import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import './App.css';
 
@@ -18,14 +19,14 @@ class App extends Component {
     console.log(this.props.corgiData)
     return (
       <div className="App">
-        <div className="navbar">
-          <p>Navbar Component</p>
-        </div>
         <Router>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/corgis" render={() => <CorgisList corgis={this.props.corgiData}/>} />
-          </Switch>
+          <div className="routes">
+            <Navbar />
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/corgis" render={() => <CorgisList corgis={this.props.corgiData}/>} />
+              </Switch>
+          </div>
         </Router>
         <Footer />
       </div>
