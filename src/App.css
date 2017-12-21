@@ -30,6 +30,7 @@
   text-decoration: none;
 }
 
+/* Footer */
 .footer {
   position: fixed;
   right: 0;
@@ -41,4 +42,9 @@
   background-color: #f88379;
   text-align: center;
   color: white;
+}
+
+.footer p {
+  font-size: 12px;
+  margin: 3px;
 }
