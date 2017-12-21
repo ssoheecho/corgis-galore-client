@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux'
+import { fetchCorgis } from './actions/corgisAction'
 import CorgisList from './components/CorgisList';
 import CorgiService from './services/CorgiService';
 import './App.css';
@@ -10,7 +13,8 @@ class App extends Component {
   }
 
   componentDidMount() {
-    CorgiService.fetchCorgis().then(corgis => this.setState({corgis}));
+    // CorgiService.fetchCorgis().then(corgis => this.setState({corgis}));
+    this.props.fetchCorgis();
   }
 
   render() {
@@ -22,7 +26,7 @@ class App extends Component {
         </div>
         <div className="main-content">
           <h1>CORGIS GALORE</h1>
-          <CorgisList corgis={this.state.corgis}/>
+          <CorgisList corgis={this.props.corgiData}/>
         </div>
         <div className="footer">
           Footer
@@ -32,4 +36,15 @@ class App extends Component {
   }
 }
 
-export default App;
+function mapStateToProps(state) {
+  debugger
+  return {
+    corgiData: state.corgis
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ fetchCorgis }, dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App)

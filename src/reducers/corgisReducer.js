@@ -3,7 +3,7 @@ export default function corgisReducer(state = {
 }, action) {
   switch (action.type) {
     case 'FETCH_CORGIS':
-      return Object.assign({}, state, { corigs: action.payload })
+      return Object.assign({}, state, { corgis: action.payload })
     default:
       return state;
   }
