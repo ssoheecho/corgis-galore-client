@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { fetchCorgis } from './actions/corgisAction'
 import CorgisList from './components/CorgisList';
+import Home from './components/Home'
 import './App.css';
 
 class App extends Component {
@@ -19,10 +20,12 @@ class App extends Component {
         <div className="navbar">
           <p>Navbar Component</p>
         </div>
-        <div className="main-content">
-          <h1>CORGIS GALORE</h1>
-          <CorgisList corgis={this.props.corgiData}/>
-        </div>
+        <Router>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <CorgisList corgis={this.props.corgiData}/>
+          </Switch>
+        </Router>
         <div className="footer">
           Footer
         </div>
