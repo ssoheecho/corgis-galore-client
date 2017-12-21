@@ -2,7 +2,7 @@ import React from 'react';
 
 const CorgisList = ({ corgis }) => {
   const renderCorgis = corgis.map((corgi, index) =>
-    <img key={index} src={corgi.images.fixed_height.url} />
+    <img key={index} src={corgi.images.fixed_height.url} alt={corgi.title} />
   )
 
   return (
