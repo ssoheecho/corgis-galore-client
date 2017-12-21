@@ -3,22 +3,15 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux'
 import { fetchCorgis } from './actions/corgisAction'
 import CorgisList from './components/CorgisList';
-import CorgiService from './services/CorgiService';
 import './App.css';
 
 class App extends Component {
 
-  state = {
-    corgis: []
-  }
-
   componentDidMount() {
-    // CorgiService.fetchCorgis().then(corgis => this.setState({corgis}));
     this.props.fetchCorgis();
   }
 
   render() {
-    console.log(this.state.corgis)
     return (
       <div className="App">
         <div className="navbar">
@@ -37,7 +30,6 @@ class App extends Component {
 }
 
 function mapStateToProps(state) {
-  debugger
   return {
     corgiData: state.corgis
   }
