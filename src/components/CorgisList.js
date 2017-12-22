@@ -1,15 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import CorgisShow from './CorgisShow'
 
-const CorgisList = ({ corgiData }) => {
+const CorgisList = ({ match, corgiData }) => {
   const renderCorgis = corgiData.map((corgi, index) =>
     <Link key={corgi.id} to={`/corgis/${corgi.id}`}><img key={index} src={corgi.images.fixed_height.url} alt={corgi.title} /></Link>
   )
 
   return (
     <div className="corgis-list">
-      {renderCorgis}
+      <Route path={`${match.url}/:corgiId`} render={() => <CorgisShow corgis={corgiData}/>}/>
+      <Route exact path={match.url} render={() => {renderCorgis}} />
     </div>
   )
 }
