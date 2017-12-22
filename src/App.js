@@ -24,8 +24,8 @@ class App extends Component {
             <Navbar />
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route path="/corgis" render={() => <CorgisList corgis={this.props.corgiData}/>} />
-              </Switch>
+              <Route path="/corgis" component={CorgisList} />} />
+            </Switch>
           </div>
         </Router>
         <Footer />
@@ -35,14 +35,8 @@ class App extends Component {
 }
 
 
-function mapStateToProps(state) {
-  return {
-    corgiData: state.corgis
-  }
-}
-
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({ fetchCorgis }, dispatch)
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App)
+export default connect(null, mapDispatchToProps)(App)
