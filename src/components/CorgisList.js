@@ -10,8 +10,8 @@ const CorgisList = ({ match, corgiData }) => {
 
   return (
     <div className="corgis-list">
-      <Route path={`${match.url}/:corgiId`} render={() => <CorgisShow corgis={corgiData}/>}/>
-      <Route exact path={match.url} render={() => {renderCorgis}} />
+      <Route path={`${match.url}/:corgiId`} component={CorgisShow} />
+      <Route exact path={match.url} render={() => renderCorgis} />
     </div>
   )
 }

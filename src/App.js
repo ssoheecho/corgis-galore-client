@@ -16,7 +16,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.props.corgiData)
     return (
       <div className="App">
         <Router>

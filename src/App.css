@@ -78,6 +78,12 @@
   margin-bottom: 50px;
 }
 
+/* CorgisShow */
+
+.corgis-show {
+  color: grey;
+}
+
 /* Footer */
 .footer {
   position: fixed;
