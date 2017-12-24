@@ -1,9 +1,7 @@
-export default function corgisReducer(state = {
-  corgis: [],
-}, action) {
+export default function corgisReducer(state = [], action) {
   switch (action.type) {
     case 'FETCH_CORGIS':
-      return Object.assign({}, state, { corgis: action.payload })
+      return state.concat(action.payload)
     default:
       return state;
   }
