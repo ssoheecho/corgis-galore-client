@@ -5,15 +5,19 @@ class CommentForm extends Component {
     text: ''
   }
 
-  
+  handleOnChange(event) {
+    this.setState({
+      text: event.target.value
+    })
+  }
+
 
   render() {
-    console.log(this.state.text)
     return (
       <div className="comments-form">
         <form>
           <label>Comment below:</label><br />
-          <input type="text" value={this.state.text} />
+          <input type="text" value={this.state.text} onChange={event => this.handleOnChange(event)} />
         </form>
       </div>
     )
