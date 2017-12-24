@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchComments } from '../../actions/commentsAction'
+import CommentForm from '../comments/CommentForm'
 
 class CorgisShow extends Component {
   componentDidMount() {
@@ -16,6 +17,7 @@ class CorgisShow extends Component {
           <img src={this.props.corgi.images.fixed_height.url} />
         </div>
         <div className="comments">
+          <CommentForm />
         </div>
       </div>
     )
