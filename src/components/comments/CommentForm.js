@@ -1,13 +1,26 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { addComment } from '../../actions/commentsAction'
+
 
 class CommentForm extends Component {
   state = {
-    text: ''
+    content: ''
   }
 
   handleOnChange(event) {
     this.setState({
-      text: event.target.value
+      content: event.target.value
+    })
+  }
+
+  handleOnSubmit(event) {
+    event.preventDefault();
+    const comment = this.state
+    this.props.addComment(comment)
+    this.setState({
+      content: ''
     })
   }
 
@@ -15,13 +28,18 @@ class CommentForm extends Component {
   render() {
     return (
       <div className="comments-form">
-        <form>
+        <form onSubmit={event => this.handleOnSubmit(event)}>
           <label>Comment below:</label><br />
-          <input type="text" value={this.state.text} onChange={event => this.handleOnChange(event)} />
+          <input type="text" value={this.state.content} onChange={event => this.handleOnChange(event)} />
+          <input type="submit" />
         </form>
       </div>
     )
   }
 }
 
-export default CommentForm
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ addComment }, dispatch)
+}
+
+export default connect(null, mapDispatchToProps)(CommentForm)
