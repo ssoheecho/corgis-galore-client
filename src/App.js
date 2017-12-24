@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { fetchCorgis } from './actions/corgisAction'
-import CorgisList from './components/CorgisList';
+import CorgisList from './components/corgis/CorgisList';
 import Home from './components/Home'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
