@@ -10,6 +10,7 @@ export function fetchComments() {
 }
 
 export function addComment(comment) {
+  debugger
   return (dispatch) => {
     dispatch({ type: 'ADDING_COMMENT'})
     return fetch('http://localhost:3001/api/comments', {

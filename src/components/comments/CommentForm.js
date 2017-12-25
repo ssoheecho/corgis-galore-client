@@ -17,7 +17,10 @@ class CommentForm extends Component {
 
   handleOnSubmit(event) {
     event.preventDefault();
-    const comment = this.state
+    const comment = {
+      content: this.state.content,
+      corgi_id: this.props.corgiId
+    }
     this.props.addComment(comment)
     this.setState({
       content: ''

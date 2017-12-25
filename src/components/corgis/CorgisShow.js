@@ -17,7 +17,7 @@ class CorgisShow extends Component {
           <img src={this.props.corgi.images.fixed_height.url} />
         </div>
         <div className="comments">
-          <CommentForm />
+          <CommentForm corgiId={this.props.corgi.id}/>
         </div>
       </div>
     )
