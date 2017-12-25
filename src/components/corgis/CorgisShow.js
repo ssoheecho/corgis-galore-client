@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { fetchComments } from '../../actions/commentsAction'
 import CommentForm from '../comments/CommentForm'
+import CommentsList from '../comments/CommentsList'
 
 class CorgisShow extends Component {
-  componentDidMount() {
-    this.props.fetchComments();
-  }
 
   render() {
     return (
@@ -18,6 +15,7 @@ class CorgisShow extends Component {
         </div>
         <div className="comments">
           <CommentForm corgiId={this.props.corgi.id}/>
+          <CommentsList />
         </div>
       </div>
     )
@@ -34,8 +32,4 @@ function mapStateToProps(state, ownProps) {
   }
 }
 
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ fetchComments }, dispatch)
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(CorgisShow)
+export default connect(mapStateToProps)(CorgisShow)
