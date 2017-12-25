@@ -19,9 +19,11 @@ class CommentsList extends Component {
 
     if (comments) {
       return(
-        <ul>
-          {comments}
-        </ul>
+        <div className="comments">
+          <ul>
+            {comments}
+          </ul>
+        </div>
       )
     }
   }

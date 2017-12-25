@@ -84,6 +84,14 @@
   color: grey;
 }
 
+.comments-show {
+  margin-top: 40px;
+}
+
+.comments-show ul {
+  list-style-type: none;
+}
+
 /* Footer */
 .footer {
   position: fixed;

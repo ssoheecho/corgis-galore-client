@@ -13,7 +13,7 @@ class CorgisShow extends Component {
         <div className="corgi-gif">
           <img src={this.props.corgi.images.fixed_height.url} />
         </div>
-        <div className="comments">
+        <div className="comments-show">
           <CommentForm corgiId={this.props.corgi.id}/>
           <CommentsList corgiId={this.props.corgi.id}/>
         </div>
