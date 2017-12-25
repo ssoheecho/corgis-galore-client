@@ -26,7 +26,7 @@ class CorgisShow extends Component {
 
 function mapStateToProps(state, ownProps) {
   const corgi = state.corgis.find(corgi => corgi.id === ownProps.match.params.corgiId)
-  console.log(corgi)
+
   if (corgi) {
     return { corgi }
   } else {
