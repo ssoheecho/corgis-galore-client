@@ -12,7 +12,9 @@ class CommentsList extends Component {
   render() {
     return(
       <div>
-        <h3>comments!</h3>
+        {this.props.commentData.map(comment => {
+          return <li>{comment.content}</li>
+        })}
       </div>
     )
   }
