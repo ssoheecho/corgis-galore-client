@@ -15,7 +15,7 @@ class CorgisShow extends Component {
         </div>
         <div className="comments">
           <CommentForm corgiId={this.props.corgi.id}/>
-          <CommentsList />
+          <CommentsList corgiId={this.props.corgi.id}/>
         </div>
       </div>
     )

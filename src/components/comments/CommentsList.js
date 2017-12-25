@@ -10,13 +10,19 @@ class CommentsList extends Component {
   }
 
   render() {
-    return(
-      <div>
-        {this.props.commentData.map(comment => {
-          return <li>{comment.content}</li>
-        })}
-      </div>
-    )
+
+    const associatedComments = this.props.commentData.filter(comment => comment.corgi_id === this.props.corgiId)
+    const comments = associatedComments.map((comment, index) => {
+      return <Comment comment={comment}/>
+    })
+
+    if (comments) {
+      return(
+        <ul>
+          {comments}
+        </ul>
+      )
+    }
   }
 
 }
