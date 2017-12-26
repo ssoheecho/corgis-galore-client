@@ -5,6 +5,24 @@ import CommentForm from '../comments/CommentForm'
 import CommentsList from '../comments/CommentsList'
 
 class CorgisShow extends Component {
+  constructor(props) {
+    super(props);
+
+    this.onUnload = this.onUnload.bind(this);
+  }
+
+  onUnload(event) {
+    event.returnValue = "Please don't reload!"
+  }
+
+  componentDidMount() {
+    window.addEventListener("beforeunload", this.onUnload)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("beforeunload", this.onUnload)
+  }
+
 
   render() {
     return (

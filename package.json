@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "react": "^16.2.0",
+    "react-beforeunload": "^1.0.4",
     "react-dom": "^16.2.0",
     "react-emoji-render": "^0.4.3",
     "react-redux": "^5.0.6",
