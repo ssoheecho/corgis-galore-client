@@ -92,6 +92,21 @@
   list-style-type: none;
 }
 
+.comments-show li span.comment {
+  position: relative;
+  left: -25px;
+}
+
+.comments-show li span.comment {
+  position: relative;
+  left: -25px;
+}
+
+.comments-show button.delete-button {
+  position: relative;
+  left: -20px;
+}
+
 /* Contact */
 .contact {
   margin-top: 120px;

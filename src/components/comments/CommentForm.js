@@ -37,9 +37,8 @@ class CommentForm extends Component {
     return (
       <div className="comments-form">
         <form onSubmit={event => this.handleOnSubmit(event)}>
-          <label>Comment below:</label><br />
+          <label>Comment & Enter</label><br />
           <input type="text" value={this.state.content} onChange={event => this.handleOnChange(event)} />
-          <input type="submit" />
         </form>
       </div>
     )
