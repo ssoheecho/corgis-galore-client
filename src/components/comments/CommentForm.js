@@ -5,9 +5,14 @@ import { addComment } from '../../actions/commentsAction'
 
 
 class CommentForm extends Component {
-  state = {
-    content: ''
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      content: ''
+    }
   }
+
 
   handleOnChange(event) {
     this.setState({
