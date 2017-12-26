@@ -1,4 +1,4 @@
-export default function corgisReducer(state = [], action) {
+export default function commentsReducer(state = [], action) {
   switch (action.type) {
     case 'FETCH_COMMENTS':
       return state.concat(action.payload)
