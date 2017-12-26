@@ -92,6 +92,11 @@
   list-style-type: none;
 }
 
+/* Contact */
+.contact {
+  margin-top: 120px;
+}
+
 /* Footer */
 .footer {
   position: fixed;

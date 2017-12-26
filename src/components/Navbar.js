@@ -16,7 +16,13 @@ const Navbar = () => {
         activeStyle={{
           color: '#f88379'
         }}
-      > Corgis</NavLink>
+      > Corgis</NavLink> |
+      <NavLink
+        to="/contact"
+        activeStyle={{
+          color: '#f88379'
+        }}
+      > Contact</NavLink>
     </div>
   )
 }

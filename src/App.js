@@ -8,6 +8,7 @@ import CorgisList from './components/corgis/CorgisList';
 import Home from './components/Home'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import Contact from './components/Contact'
 import './App.css';
 
 class App extends Component {
@@ -26,6 +27,7 @@ class App extends Component {
             <Switch>
               <Route exact path="/" component={Home} />
               <Route path="/corgis" component={CorgisList} />} />
+              <Route path="/contact" component={Contact} />
             </Switch>
           </div>
         </Router>
