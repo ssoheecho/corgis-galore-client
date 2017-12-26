@@ -23,3 +23,10 @@ export function addComment(comment) {
       .then(data => dispatch( { type: 'ADD_COMMENT', payload: data }))
   }
 }
+
+export const removeComment = (comment) => {
+  return {
+    type: 'REMOVE_COMMENT',
+    comment
+  };
+};
