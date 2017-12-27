@@ -13,7 +13,7 @@ For the client side of the app, please run `yarn install` or `npm install` then 
 
 ## License
 
-Copyright (c) 2017 Sohee Cho. Full license [here](https://github.com/soheecho94/corgis-galore-client/blob/master/LICENSE.md)
+Copyright (c) 2017 Sohee Cho. Full license [here](https://github.com/soheecho94/corgis-galore-client/blob/master/LICENSE.md).
 
 ##
 
