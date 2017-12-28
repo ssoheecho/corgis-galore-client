@@ -25,7 +25,7 @@ class Comment extends Component {
         <li key={this.props.comment.id}>
           <span className="comment">{this.props.comment.content}</span>
         </li>
-        <label className ="likes">{this.props.comment.likes}👍🏻</label>
+        <label className ="likes">{this.props.comment.likes} 👍🏻</label>
         <button className="like-button" onClick={this.handleOnClickLike}>like</button>
         <button className="delete-button" onClick={this.handleOnClick}>X</button>
       </div>
