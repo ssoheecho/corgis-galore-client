@@ -15,7 +15,7 @@ class Comments extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="all-comments">
         {this.renderComments()}
       </div>
     )
