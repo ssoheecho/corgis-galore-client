@@ -22,6 +22,19 @@ export function addComment(comment) {
   }
 }
 
+export function updateLike(comment) {
+  return (dispatch) => {
+    return fetch(`http://localhost:3001/api/${comment.id}`, {
+      method: 'PATCH',
+      body: JSON.stringify(comment),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+      .then(res => console.log(res))
+  }
+}
+
 export const removeComment = (comment) => {
   return {
     type: 'REMOVE_COMMENT',
