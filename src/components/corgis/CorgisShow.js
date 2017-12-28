@@ -15,11 +15,8 @@ class CorgisShow extends Component {
   }
 
   handleOnClick = () => {
-    this.setState({
-      favorite: true
-    })
     const favoriteCorgi = {
-      favorite: this.state,
+      favorite: true,
       corgiId: this.props.corgi.id
     }
     this.props.addToFavorite(favoriteCorgi);
@@ -61,7 +58,7 @@ function mapStateToProps(state, ownProps) {
 }
 
 function mapDispatchToProps(dispatch) {
-  bindActionCreators({ addToFavorite }, dispatch)
+  return bindActionCreators({ addToFavorite }, dispatch)
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(CorgisShow)
