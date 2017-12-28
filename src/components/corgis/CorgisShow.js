@@ -6,13 +6,6 @@ import CommentsList from '../comments/CommentsList'
 import { addToFavorite } from '../../actions/corgisAction'
 
 class CorgisShow extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      favorite: false
-    }
-  }
 
   handleOnClick = () => {
     const favoriteCorgi = {
