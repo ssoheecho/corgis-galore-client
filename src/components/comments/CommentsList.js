@@ -10,7 +10,6 @@ class CommentsList extends Component {
 
     const associatedComments = this.props.commentData.filter(comment => comment.corgi_id === this.props.corgiId)
     const comments = associatedComments.map((comment) => {
-      console.log(comment)
       return <Comment comment={comment}/>
     })
 
