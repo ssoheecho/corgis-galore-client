@@ -102,9 +102,19 @@
   left: -20px;
 }
 
-.comments-show button.delete-button {
+.comments-show label.likes {
+  position: relative;
+  left: -27px;
+}
+
+.comments-show button.like-button {
   position: relative;
   left: -20px;
+}
+
+.comments-show button.delete-button {
+  position: relative;
+  left: -15px;
 }
 
 /* Contact */
