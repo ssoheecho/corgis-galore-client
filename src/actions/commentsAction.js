@@ -22,16 +22,17 @@ export function addComment(comment) {
   }
 }
 
-export function updateLike(comment) {
+export function updateLikes(updateInfo) {
   return (dispatch) => {
-    return fetch(`http://localhost:3001/api/${comment.id}`, {
+    return fetch(`http://localhost:3001/api/comments/${updateInfo.id}`, {
       method: 'PATCH',
-      body: JSON.stringify(comment),
+      body: JSON.stringify(updateInfo),
       headers: {
         'Content-Type': 'application/json'
       }
     })
-      .then(res => console.log(res))
+      .then(res => res.json())
+      .then(data => dispatch({ type: 'UPDATE_LIKES', payload: data }))
   }
 }
 
