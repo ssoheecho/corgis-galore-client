@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 class FavoriteCorgis extends Component {
   render() {
     const favoriteCorgis = this.props.corgis.filter(corgi => corgi.favorite === true)
-    const favoriteCorgi = favoriteCorgis.map(corgi => <img src={corgi.images.fixed_height.url} />)
+    const favoriteCorgi = favoriteCorgis.map(corgi => <img alt={corgi.title} key={corgi.id} src={corgi.images.fixed_height.url} />)
 
     return (
       <div className="favorite-corgis">
