@@ -8,7 +8,7 @@ class FavoriteCorgis extends Component {
 
     return (
       <div className="favorite-corgis">
-        <h2>Favorite Corgis Below:</h2>
+        <h2>Favorite Corgis:</h2>
         {favoriteCorgi}
       </div>
     )
