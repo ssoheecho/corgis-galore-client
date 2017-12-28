@@ -7,3 +7,10 @@ export function fetchCorgis() {
       .then(data => dispatch({ type: 'FETCH_CORGIS', payload: data}))
   }
 }
+
+export const addToFavorite = (favoriteCorgi) => {
+  return {
+    type: 'ADD_FAVORITE',
+    favoriteCorgi
+  };
+}

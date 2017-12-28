@@ -13,6 +13,13 @@ class CorgisShow extends Component {
     }
   }
 
+  handleOnClick = () => {
+    this.setState({
+      favorite: true
+    })
+    
+  }
+
   onUnload = (event) => {
     event.returnValue = "Please don't reload!"
   }

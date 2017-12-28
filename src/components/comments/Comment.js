@@ -14,9 +14,9 @@ class Comment extends Component {
     return (
       <div>
         <li>
-          <span class="comment">{this.props.comment.content}</span>
+          <span className="comment">{this.props.comment.content}</span>
         </li>
-        <button class="delete-button" onClick={this.handleOnClick}>X</button>
+        <button className="delete-button" onClick={this.handleOnClick}>X</button>
       </div>
     )
   }
