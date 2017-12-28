@@ -18,6 +18,12 @@ const Navbar = () => {
         }}
       > Corgis</NavLink> |
       <NavLink
+        to="/favorites"
+        activeStyle={{
+          color: '#f88379'
+        }}
+      > Favorites</NavLink> |
+      <NavLink
         to="/contact"
         activeStyle={{
           color: '#f88379'
