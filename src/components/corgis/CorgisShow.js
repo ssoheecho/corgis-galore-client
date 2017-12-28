@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import CommentForm from '../comments/CommentForm'
 import CommentsList from '../comments/CommentsList'
+import { addToFavorite } from '../../actions/corgisAction'
 
 class CorgisShow extends Component {
   constructor(props) {
@@ -17,7 +18,11 @@ class CorgisShow extends Component {
     this.setState({
       favorite: true
     })
-    
+    const favoriteCorgi = {
+      favorite: this.state,
+      corgiId: this.props.corgi.id
+    }
+    this.props.addToFavorite(favoriteCorgi);
   }
 
   onUnload = (event) => {
@@ -52,12 +57,11 @@ class CorgisShow extends Component {
 
 function mapStateToProps(state, ownProps) {
   const corgi = state.corgis.find(corgi => corgi.id === ownProps.match.params.corgiId)
-
-  if (corgi) {
-    return { corgi }
-  } else {
-    return { corgi: {} }
-  }
+  return { corgi }
 }
 
-export default connect(mapStateToProps)(CorgisShow)
+function mapDispatchToProps(dispatch) {
+  bindActionCreators({ addToFavorite }, dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(CorgisShow)
