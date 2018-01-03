@@ -9,7 +9,6 @@ import Home from './components/Home'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Contact from './components/Contact'
-import Comments from './components/Comments'
 import FavoriteCorgis from './components/corgis/FavoriteCorgis'
 import './App.css';
 
@@ -30,7 +29,6 @@ class App extends Component {
               <Route exact path="/" component={Home} />
               <Route path="/corgis" component={CorgisList} />} />
               <Route path="/contact" component={Contact} />
-              <Route path="/comments" component={Comments} />
               <Route path="/favorites" component={FavoriteCorgis} />
             </Switch>
           </div>
