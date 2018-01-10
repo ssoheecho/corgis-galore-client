@@ -2,7 +2,7 @@ import fetch from 'isomorphic-fetch';
 
 export function fetchComments() {
   return (dispatch) => {
-    return fetch('http://localhost:3001/api/comments')
+    return fetch('https://corgis-galore-api.herokuapp.com/api/comments')
       .then(res => res.json())
       .then(data => dispatch({ type: 'FETCH_COMMENTS', payload: data}))
   }
@@ -10,7 +10,7 @@ export function fetchComments() {
 
 export function addComment(comment) {
   return (dispatch) => {
-    return fetch('http://localhost:3001/api/comments', {
+    return fetch('https://corgis-galore-api.herokuapp.com/api/comments', {
       method: 'POST',
       body: JSON.stringify(comment),
       headers: {
@@ -24,7 +24,7 @@ export function addComment(comment) {
 
 export function updateLikes(updateInfo) {
   return (dispatch) => {
-    return fetch(`http://localhost:3001/api/comments/${updateInfo.id}`, {
+    return fetch(`https://corgis-galore-api.herokuapp.com/api/comments/${updateInfo.id}`, {
       method: 'PATCH',
       body: JSON.stringify(updateInfo),
       headers: {
